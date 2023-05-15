@@ -7,8 +7,32 @@
     android:layout_height="match_parent"
     android:background="@drawable/clouds"
     android:layoutDirection="ltr"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_alignParentLeft="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: "
+            android:textStyle="bold"
+            android:textColor="#FF6F00"
+            />
+        <TextView
+            android:id="@+id/main_TXT_odemeter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textStyle="bold"
+            android:textColor="#FF6F00"
+            />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="200dp"
@@ -48,6 +72,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="60dp"
         android:layout_marginLeft="50dp"
+        android:backgroundTint="#FF6F00"
         app:srcCompat="@drawable/arrow"
         />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -59,143 +84,319 @@
         android:layout_marginBottom="60dp"
         android:layout_marginRight="50dp"
         app:srcCompat="@drawable/arrow"
+        android:backgroundTint="#FF6F00"
         android:rotation="180"
         />
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="30dp"
-        android:columnCount="3"
-        android:rowCount="5">
+        android:layout_height="match_parent"
+        android:rowCount="8"
+        android:columnCount="5"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="80dp"
+>
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop00"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop01"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
-            android:layout_marginHorizontal="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop02"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
-
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop03"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop04"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop10"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop11"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
-            android:layout_marginHorizontal="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop12"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
-
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop13"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop14"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop20"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop21"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
-            android:layout_marginHorizontal="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop22"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
-
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop23"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop24"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop30"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop31"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
-            android:layout_marginHorizontal="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop32"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
-
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop33"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop34"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop40"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop41"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
-            android:layout_marginHorizontal="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_drop42"
-            android:layout_width="75dp"
-            android:layout_height="55dp"
-            android:layout_margin="20dp"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop43"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop44"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop50"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop51"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop52"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop53"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop54"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop60"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop61"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop62"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop63"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop64"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop70"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop71"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop72"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop73"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_drop74"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drop1" />
+
+
 
 
     </GridLayout>
@@ -205,35 +406,45 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="17dp"
         android:layout_marginRight="17dp"
-        android:columnCount="3"
+        android:columnCount="5"
         android:rowCount="1"
-        android:layout_marginBottom="125dp"
+        android:layout_marginBottom="115dp"
         android:layout_marginTop="60dp"
 
         android:layout_alignParentBottom="true">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_flame1"
-            android:layout_width="100dp"
-            android:layout_height="130dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/flame" />
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_flame2"
-            android:layout_width="100dp"
-            android:layout_height="130dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:visibility="visible"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
             app:srcCompat="@drawable/flame" />
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_flame3"
-            android:layout_width="100dp"
-            android:layout_height="130dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
+            android:visibility="visible"
+            app:srcCompat="@drawable/flame" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_flame4"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/flame" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_flame5"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/flame" />
 
