@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".Activities.LeaderboardsActivity">
+
+    <FrameLayout
+        android:id="@+id/leaderboard_FRM_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="5dp"
+        />
+    <FrameLayout
+        android:id="@+id/leaderboard_FRM_gmap"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="5dp"
+        />
+    <Button
+        android:id="@+id/leaderboard_BTN_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF6F00"
+        android:text="To menu"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
